@@ -1,3 +1,10 @@
+var form = document.getElementById("image-form");
+form.onsubmit = function(e) {
+	e.preventDefault();
+	console.log(form.test.value);
+};
+
+
 // Install the client from NPM
 npm install clarifai
 

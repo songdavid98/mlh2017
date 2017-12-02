@@ -17,13 +17,20 @@
                 Image recognition using Clarifai
             </div>
             <div style="padding-top: 50px;">
-                <form action="myform.cgi">
+                <form onsubmit="js/main.js" id="image-form">
+                    <input type="text" name="test">
+                    <br>
+                    <br>
                     <input type="file" name="fileupload" value="fileupload" id="fileupload">
                     <label for="fileupload"> Select a file to upload</label>
                     <br>
                     <input type="submit" value="Submit">
                 </form>
             </div>
+            <br>
+            <br>
+            <p id="result">
+            </p>
         </div>
 
         <br>
@@ -32,6 +39,8 @@
 
 </body>
 
-<script type="text/javascript " src="js/main.js"></script>
-<script type="text/javascript " src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
 </html>
