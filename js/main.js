@@ -16,6 +16,13 @@ catch(err) {
   throw "Invalid API Key";
 }
 
+// Checks for valid image type by searching URL for valid image types
+// search(subvar) returns index of subvar first found in given var, -1 if not found
+function validFile(imageName) {
+	var lowerImageName = imageName.toLowerCase();
+	return lowerImageName.search(/jpg|png|bmp|tiff/gi) != -1;
+}
+
 // predict the contents of an image by passing in a url
 app.models.predict(Clarifai.GENERAL_MODEL, 'https://samples.clarifai.com/metro-north.jpg').then(
 	function(response) {
