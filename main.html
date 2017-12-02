@@ -9,23 +9,6 @@
     
 </head>
 
-<script type="text/javascript" src="https://sdk.clarifai.com/js/clarifai-latest.js"></script>
-
-<script type="text/javascript" src="js/predict.js"></script>
-<script type="text/javascript" src="js/keys.js"></script>
-<script type="text/javascript" src="https://sdk.clarifai.com/js/clarifai-latest.js"></script>
-<script>
-try {
-var app = new Clarifai.App({
- apiKey: myApiKey
-});
-}
-catch(err) {
-alert("Need a valid API Key!");
-throw "Invalid API Key";
-}
-</script>
-
 <body>
     <center>
          <div class="container">
@@ -57,7 +40,10 @@ throw "Invalid API Key";
 </body>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script type="text/javascript" src="js/main.js"></script>
 <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://sdk.clarifai.com/js/clarifai-latest.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript" src="js/predict.js"></script>
+<script type="text/javascript" src="js/keys.js"></script>
 
 </html>
