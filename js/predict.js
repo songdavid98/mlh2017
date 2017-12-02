@@ -4,42 +4,31 @@ function doPredict(value) {
     }).then(
         function (response) {
             console.log(response);
-
-			var keywords = ["weapon", "monster", "scary", "fear", "horror",
+			
+			// negative keywords
+			var nKeywords = ["weapon", "monster", "scary", "fear", "horror",
 							"nightmare", "knife", "blood", "bloody", "creepy",
 							"dangerous", "danger", "hideous", "wild", "fight",
 							"fighting", "dragon", "aggressive disposition",
-							"attack", "aggressive", "claw", "sharp"];
+							"attack", "aggressive", "claw", "sharp", "dark",
+							"night", "dirty", "dirt", "mud", "dust", "messy",
+							"mask", "war", "military", "offense", "strange",
+							"security", "army", "navy"];
+			// positive keywords
+			var pKeywords = ["cute", "pretty", "handsome", "attractive",
+							"nature", "animal", "art", "nypmh", "happy",
+							"happiness", "healthy", "health", "magic", "sun",
+							"smile", "laugh", "cheerful", "freedom", "child",
+							"children", "organized"];
+			
 			var output = "<b>Output:</b><br>";
 			
-            var outputStatus = "Status code: " +
-                response.rawData.status.code +
-                "<br>Description: " +
-                response.rawData.status.description;
-            // add to output string
-            output += outputStatus + "<br><br>";
-
-            var outputArray = response.rawData.outputs[0];
-
-            var outputModel = "Model name: " +
-                outputArray.model.display_name +
-                "<br>app_id: " +
-                outputArray.model.app_id;
-            // add to output string
-            output += outputModel + "<br>-------------------------------<br>";
-
+			var outputArray = response.rawData.outputs[0];
             var regionArray = outputArray.data.concepts;
-			var dangerCount = 0;
-
+			
+			var nCount = 0;
+			var pCount = 0;
             for (var i = 0; i < regionArray.length; i++) {
-				for (var j = 0; j < keywords.length; j++) {
-					// str1.localeCompare(str2) returns 0 if same string
-					if (regionArray[i].name.localeCompare(keywords[j]) == 0) {
-						dangerCount += regionArray[i].value;
-						output += "<b>Danger Percentage: " + dangerCount + "</b><br>";
-					}
-				}
-				
 				var outputTagVal = "Tag: "
 				+ regionArray[i].name
 				+ "<br>Value: "
@@ -47,10 +36,31 @@ function doPredict(value) {
 				
 				// add to output string
 				output += outputTagVal + "<br><br>";
+				
+				for (var j = 0; j < nKeywords.length; j++) {
+					// str1.localeCompare(str2) returns 0 if same string
+					
+					if (regionArray[i].name.localeCompare(nKeywords[j]) == 0) {
+						nCount += regionArray[i].value;
+						output += "<b>Danger Percentage = " + nCount + "</b><br><br>";
+						break;
+					}
+					
+					if (regionArray[i].name.localeCompare(pKeywords[j]) == 0) {
+						pCount += regionArray[i].value;
+						output += "<b>Safe Percentage = " + pCount + "</b><br><br>";
+						break;
+					}
+				}
 			}
 			
-			var dangerPercentage = (dangerCount * 10);
-			output = "<b>YOUR DANGER PERCENTAGE IS... " + Math.round(dangerPercentage) + "%</b><br><br>" + output;
+			var nPercentage = Math.round(nCount * 10);
+			var pPercentage = Math.round(pCount * 10);
+			output = "<b>THE DANGER PERCENTAGE IS... "
+			+ Math.round(nPercentage) + "%</b><br>"
+			+ "<b>THE SAFE PERCENTAGE IS... "
+			+ Math.round(pPercentage) + "%</b><br>"
+			+ "<br><br>" + output;
 			
 			var imgURL = '<img id="inputted_img" src="'
 			+ outputArray.input.data.image.url
