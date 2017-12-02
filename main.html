@@ -32,22 +32,27 @@
                 <br>OR
                 <br>
                 <br>
-                <input type="file" name="fileupload" value="fileupload" id="fileupload">
+                <input type="file" name="filename" value="filename" id="filename">
                 <br>
-                <!--
+
                 <button onclick="
-                    if (!validFile(imgurl.value)) {
+                    if (!validFile(filename.value)) {
                         alert('Supported File Types: JPEG, PNG, TIFF, BMP');
                         return;
                     }
-                    
+                    var file    = document.querySelector('input[type=file]').files[0];
                     var reader  = new FileReader();
-                    var localBase64 = reader.result.split('base64,')[1];
+                    reader.addEventListener('load', function () {
+                        var localBase64 = reader.result.split('base64,')[1];
+                        doPredictURL({ base64: localBase64 });
+                    }, false);
 
-                    doPredictFU( localBase64 );" style="width:112px">
+                    if (file) {
+                      reader.readAsDataURL(file);
+                    }" style="width:112px">
                     Predict via File Upload
                 </button>
--->
+
 
             </div>
             <br>
