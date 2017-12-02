@@ -1,5 +1,5 @@
 function doPredictURL(value) {
-    app.models.predict(Clarifai.GENERAL_MODEL, value).then(
+    app.models.predict(Clarifai.GENERAL_MODEL, value, { maxConcepts: 45 }).then(
         function (response) {
             console.log(response);
 			// make sense of response
