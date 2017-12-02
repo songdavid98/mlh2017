@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <title>MLH 2017</title>
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 
 <body>
@@ -24,15 +25,28 @@
                     return;
                   } 
 
-                  doPredictURL($('#imgurl').val(), 'url');" style="width:112px">Predict a URL!</button>
+                  doPredictURL( $('#imgurl').val() );" style="width:112px">Predict via URL
+                </button>
                 <br>
-                <!--
+
                 <br>OR
                 <br>
                 <br>
                 <input type="file" name="fileupload" value="fileupload" id="fileupload">
-                <label for="fileupload"> Select a file to upload</label>
                 <br>
+                <!--
+                <button onclick="
+                    if (!validFile(imgurl.value)) {
+                        alert('Supported File Types: JPEG, PNG, TIFF, BMP');
+                        return;
+                    }
+                    
+                    var reader  = new FileReader();
+                    var localBase64 = reader.result.split('base64,')[1];
+
+                    doPredictFU( localBase64 );" style="width:112px">
+                    Predict via File Upload
+                </button>
 -->
 
             </div>
