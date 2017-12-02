@@ -25,7 +25,7 @@
                     return;
                   } 
 
-                  doPredictURL( $('#imgurl').val() );" style="width:112px">Predict via URL
+                  doPredict( $('#imgurl').val() );" style="width:112px">Predict via URL
                 </button>
                 <br>
 
@@ -44,7 +44,7 @@
                     var reader  = new FileReader();
                     reader.addEventListener('load', function () {
                         var localBase64 = reader.result.split('base64,')[1];
-                        doPredictURL({ base64: localBase64 });
+                        doPredict({ base64: localBase64 });
                     }, false);
 
                     if (file) {
