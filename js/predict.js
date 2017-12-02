@@ -4,12 +4,14 @@ function doPredict(value) {
     }).then(
         function (response) {
             console.log(response);
-			
+
 			var keywords = ["weapon", "monster", "scary", "fear", "horror",
 							"nightmare", "knife", "blood", "bloody", "creepy",
-							"dangerous", "danger"];
-            var output = "<b>Output:</b><br>";
-
+							"dangerous", "danger", "hideous", "wild", "fight",
+							"fighting", "dragon", "aggressive disposition",
+							"attack", "aggressive", "claw", "sharp"];
+			var output = "<b>Output:</b><br>";
+			
             var outputStatus = "Status code: " +
                 response.rawData.status.code +
                 "<br>Description: " +
@@ -46,7 +48,15 @@ function doPredict(value) {
 				// add to output string
 				output += outputTagVal + "<br><br>";
 			}
-
+			
+			var dangerPercentage = (dangerCount * 10);
+			output = "<b>YOUR DANGER PERCENTAGE IS... " + Math.round(dangerPercentage) + "%</b><br><br>" + output;
+			
+			var imgURL = '<img id="inputted_img" src="'
+			+ outputArray.input.data.image.url
+			+ '" width="400px"/><br><br>';
+			output = imgURL + output;
+			
             maindiv = document.getElementById("result");
             maindiv.innerHTML = output;
         },
