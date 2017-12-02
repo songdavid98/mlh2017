@@ -6,7 +6,6 @@
     <meta charset="UTF-8">
     <title>MLH 2017</title>
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    
 </head>
 
 <body>
@@ -16,19 +15,26 @@
                 MLH 2017! <br>
                 Image recognition using Clarifai
             </div>
-            <div style="padding-top: 50px;">
+			
+            <div style="padding-top: 25px;">
                 <form onsubmit="js/main.js" id="image-form">
-                    <input type="text" name="test">
-                    <br>
-                    <br>
+					<!-- button to upload image -->
                     <input type="file" name="fileupload" value="fileupload" id="fileupload">
-                    <label for="fileupload"> Select a file to upload</label>
-                    <br>
+					<br>
+					<!-- text box -->
+					<input type="text" name="test">
+					<br>
+					<br>
+					<!-- label -->
+                    <label for="fileupload">Select a file to upload</label>
+					<br>
+					<!-- submit button -->
                     <input type="submit" value="Submit">
                 </form>
             </div>
+			<br>
             <br>
-            <br>
+			
             <p id="result">
             </p>
         </div>
