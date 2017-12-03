@@ -25,7 +25,8 @@ function doPredict(value) {
 							"highway", "fog", "fungus", "bacteria", "cave", "canyon",
 							"rocky", "hanging", "heavy", "machine", "labor", "rusty",
 							"hurry", "haste", "storm", "stormy", "flood", "earthquake",
-							"tsunami", "typhoon", "fire", "rifle", "battle", "stalactite"];
+							"tsunami", "typhoon", "fire", "rifle", "battle", "stalactite",
+							"angry", "crazy"];
 			// positive keywords
 			var pKeywords = ["cute", "pretty", "handsome", "attractive",
 							"art", "happy", "daylight", "day", "colorful",
@@ -38,7 +39,7 @@ function doPredict(value) {
 							"tropical", "flora", "house", "home", "pet", "delicious",
 							"tasty", "love", "couple", "group", "medicine", "relaxation",
 							"relaxed", "fun", "enjoyment", "safe", "creativity", "many",
-							"group together", "together", "helmet"];
+							"group together", "together", "helmet", "calm", "laughter"];
 			
 			var output = "<b>Output:</b><br>";
 			
