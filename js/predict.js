@@ -14,26 +14,31 @@ function doPredict(value) {
 							"night", "dirty", "dirt", "mud", "dust", "messy",
 							"mask", "war", "military", "offense", "strange",
 							"security", "army", "navy", "gun", "sad", "crying",
-							"tears", "depressed", "depression", "greed", "greedy",
-							"isolated", "alone", "debt", "isolate", "bad luck",
-							"tax", "mountain", "wasteland", "night", "nighttime",
+							"depressed", "depression", "greed", "greedy",
+							"isolated", "alone", "debt", "isolate", "rust",
+							"mountain", "wasteland", "night", "nighttime",
 							"shadow", "desert", "abandoned", "vehicle", "calamity",
 							"waste", "scissors", "sword", "axe", "teeth", "fangs",
 							"dry", "barbaic", "cactus", "cage", "wilderness", "captive",
 							"jail", "lock", "locked", "ocean", "space", "dead", "death",
-							"toxic"];
+							"toxic", "railway", "railroad track", "train", "railroad",
+							"highway", "fog", "fungus", "bacteria", "cave", "canyon",
+							"rocky", "hanging", "heavy", "machine", "labor", "rusty",
+							"hurry", "haste", "storm", "stormy", "flood", "earthquake",
+							"tsunami", "typhoon", "fire", "rifle", "battle", "stalactite"];
 			// positive keywords
 			var pKeywords = ["cute", "pretty", "handsome", "attractive",
 							"art", "happy", "daylight", "day", "colorful",
-							"happiness", "healthy", "health", "magic",
+							"happiness", "healthy", "health", "creative",
 							"smile", "laugh", "cheerful", "freedom", "child",
 							"children", "organized", "sunny", "funny", "curious",
 							"curiousity", "adorable", "beautiful", "friendly",
-							"care", "accomplished", "prosperity", "good luck",
-							"gain", "share", "family", "friend", "friends",
+							"family", "friend", "friends", "safety", "free",
 							"education", "music", "vacation",  "artistic", "leisure",
 							"tropical", "flora", "house", "home", "pet", "delicious",
-							"tasty"];
+							"tasty", "love", "couple", "group", "medicine", "relaxation",
+							"relaxed", "fun", "enjoyment", "safe", "creativity", "many",
+							"group together", "together", "helmet"];
 			
 			var output = "<b>Output:</b><br>";
 			
