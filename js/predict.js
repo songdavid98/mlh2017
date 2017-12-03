@@ -20,7 +20,8 @@ function doPredict(value) {
 							"shadow", "desert", "abandoned", "vehicle", "calamity",
 							"waste", "scissors", "sword", "axe", "teeth", "fangs",
 							"dry", "barbaic", "cactus", "cage", "wilderness", "captive",
-							"jail", "lock", "locked", "ocean", "space", "dead", "death"];
+							"jail", "lock", "locked", "ocean", "space", "dead", "death",
+							"toxic"];
 			// positive keywords
 			var pKeywords = ["cute", "pretty", "handsome", "attractive",
 							"art", "happy", "daylight", "day", "colorful",
@@ -31,7 +32,8 @@ function doPredict(value) {
 							"care", "accomplished", "prosperity", "good luck",
 							"gain", "share", "family", "friend", "friends",
 							"education", "music", "vacation",  "artistic", "leisure",
-							"tropical", "flora", "house", "home", "pet"];
+							"tropical", "flora", "house", "home", "pet", "delicious",
+							"tasty"];
 			
 			var output = "<b>Output:</b><br>";
 			
