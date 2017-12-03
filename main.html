@@ -12,20 +12,20 @@
     <center>
         <div class="container">
             <div class="title">
-                MLH 2017! <br> Image recognition using Clarifai
+                MLH 2017! <br> Danger/Safety Calculator using Clarifai
             </div>
 
             <div style="padding-top: 50px;">
                 Image URL:
                 <input type="text" id="imgurl" placeholder="Image URL" size="80" />
 
-                <button onclick="
+                <button type="button" class="btn btn-primary" onclick="
                   if(imgurl.value == '') { 
                     alert('Please enter an image URL!'); 
                     return;
                   } 
 
-                  doPredict( $('#imgurl').val() );" style="width:112px">Predict via URL
+                  doPredict( $('#imgurl').val() );">Predict via URL
                 </button>
                 <br>
 
@@ -35,7 +35,7 @@
                 <input type="file" name="filename" value="filename" id="filename">
                 <br>
 
-                <button onclick="
+                <button type="button" class="btn btn-primary" onclick="
                     if (!validFile(filename.value)) {
                         alert('Supported File Types: JPEG, PNG, TIFF, BMP');
                         return;
@@ -49,9 +49,7 @@
 
                     if (file) {
                       reader.readAsDataURL(file);
-                    }" style="width:112px">
-                    Predict via File Upload
-                </button>
+                    }">Predict via File Upload</button>
 
 
             </div>
