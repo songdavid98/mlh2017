@@ -13,13 +13,25 @@ function doPredict(value) {
 							"attack", "aggressive", "claw", "sharp", "dark",
 							"night", "dirty", "dirt", "mud", "dust", "messy",
 							"mask", "war", "military", "offense", "strange",
-							"security", "army", "navy"];
+							"security", "army", "navy", "gun", "sad", "crying",
+							"tears", "depressed", "depression", "greed", "greedy",
+							"isolated", "alone", "debt", "isolate", "bad luck",
+							"tax", "mountain", "wasteland", "night", "nighttime",
+							"shadow", "desert", "abandoned", "vehicle", "calamity",
+							"waste", "scissors", "sword", "axe", "teeth", "fangs",
+							"dry", "barbaic", "cactus", "cage", "wilderness", "captive",
+							"jail", "lock", "locked", "ocean", "space", "dead", "death"];
 			// positive keywords
 			var pKeywords = ["cute", "pretty", "handsome", "attractive",
-							"nature", "animal", "art", "nypmh", "happy",
-							"happiness", "healthy", "health", "magic", "sun",
+							"art", "happy", "daylight", "day", "colorful",
+							"happiness", "healthy", "health", "magic",
 							"smile", "laugh", "cheerful", "freedom", "child",
-							"children", "organized"];
+							"children", "organized", "sunny", "funny", "curious",
+							"curiousity", "adorable", "beautiful", "friendly",
+							"care", "accomplished", "prosperity", "good luck",
+							"gain", "share", "family", "friend", "friends",
+							"education", "music", "vacation",  "artistic", "leisure",
+							"tropical", "flora", "house", "home", "pet"];
 			
 			var output = "<b>Output:</b><br>";
 			
